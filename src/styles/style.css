@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "White Rabbit";
+  src: url("fonts/WHITRABT.txt") format("truetype");
+}
+
+body {
+  color: white;
+  background-color: black;
+  overflow: hidden;
+  font-family: "White Rabbit", monospace;
+}
+
+#cursorCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header #logo {
+  margin-right: auto;
+}
+
+header #fav-champ {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header #fav-champ img {
+  margin: 5px;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #32CD32;
+}
+
+header #login {
+  margin-left: auto;
+  margin-right: 5%;
+  padding: 10px;
+}
+
+#logo img {
+  height: 150px;
+  width: 150px;
+}
+
+hr {
+  width: 95%;
+  height: 2px;
+  background-color: #32CD32;
+  border: none;
+  border-radius: 20%;
+}
+
+#login {
+  border: 1px #32CD32;
+  border-radius: 30%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#champ-select {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=style.css.map */

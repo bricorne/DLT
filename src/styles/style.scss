@@ -1,0 +1,91 @@
+$maingreen: #32CD32;
+$wargreen: #556B2F;
+
+@font-face {
+    font-family: 'White Rabbit';
+    src: url('fonts/WHITRABT.txt') format('truetype');
+}
+
+body {
+    color: white;
+    background-color: black;
+    overflow: hidden;
+    font-family: 'White Rabbit', monospace;
+}
+
+#cursorCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+
+}
+
+// HEADER
+// HEADER
+// HEADER
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    #logo {
+        margin-right: auto;
+    }
+
+    #fav-champ {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+            margin: 5px;
+            width: 70px;
+            height: 70px;
+            border: 1px solid $maingreen;
+        }
+    }
+
+    #login {
+        margin-left: auto;
+        margin-right: 5%;
+        padding: 10px;
+    }
+}
+
+#logo img {
+    height: 150px;
+    width: 150px;
+}
+
+hr {
+    width: 95%;
+    height: 2px;
+    background-color: $maingreen;
+    border: none;
+    border-radius: 20%;
+}
+
+#login {
+    border: 1px $maingreen;
+    border-radius: 30%;
+}
+
+// MAIN
+// MAIN
+// MAIN
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#champ-select {
+    margin-left: auto;
+    margin-right: auto;
+}
