@@ -1,20 +1,13 @@
 import React from 'react';
-import Typewriter from 'react-typewriter-effect';
+import TypingEffect from './TypingEffect';
+import ChampionList from './ChampionList';
 
 function Main() {
     return (
         <main>
             <div id='champ-select'>
-                <p>
-                    <Typewriter
-                        className="typewriter-text"
-                        text="Veuillez sélectionner un champion :"
-                        cursor="|"
-                        typeSpeed={50}
-                        deleteSpeed={50}
-                        delaySpeed={100}
-                    />
-                </p>
+                    <TypingEffect text="Veuillez sélectionner un champion :" speed={50} />
+                    <ChampionList />
             </div>
         </main>
     );

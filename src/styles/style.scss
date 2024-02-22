@@ -4,7 +4,6 @@ $wargreen: #556B2F;
 body {
     color: white;
     background-color: black;
-    overflow: hidden;
     font-family: 'White Rabbit', monospace;
 }
 
@@ -77,10 +76,29 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-}
-
-#champ-select {
+    width: 45%;
     margin-left: auto;
     margin-right: auto;
 }
+
+#champ-select {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#allChamp {
+    display: flex;
+  flex-wrap: wrap;
+}
+
+.champion {
+    flex: 0 0 16%;
+    max-width: 16%;
+    margin-bottom: 15px;
+    img {
+        width: 80px;
+        height: 80px;
+        border: 1px solid $maingreen;
+    }
+  }
