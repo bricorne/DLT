@@ -4,6 +4,7 @@ function Footer() {
     return (
         <footer>
             {/* Contenu de l'en-tête ici, converti en JSX */}
+
         </footer>
     );
 }

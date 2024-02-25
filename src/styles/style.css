@@ -65,20 +65,31 @@ main {
   margin-right: auto;
 }
 
-#champ-select {
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+#search-bar {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#search-bar input {
+  margin-left: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 30px;
+  border: 1px solid #32CD32;
 }
 
-#allChamp {
+#champ-select {
+  width: 100%;
+}
+
+#all-champ {
   display: flex;
   flex-wrap: wrap;
 }
 
 .champion {
-  flex: 0 0 16%;
-  max-width: 16%;
+  margin-right: 15px;
   margin-bottom: 15px;
 }
 .champion img {

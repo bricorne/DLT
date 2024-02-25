@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import TypingEffect from './TypingEffect';
+import { Link } from 'react-router-dom';
 
 function ChampionList() {
   const [champions, setChampions] = useState([]);
+  const [searchTerm, setSearchTerm] = useState(''); // Nouvel état pour la chaîne de recherche
 
   useEffect(() => {
     fetch('https://ddragon.leagueoflegends.com/cdn/14.4.1/data/en_US/champion.json')
@@ -17,13 +20,30 @@ function ChampionList() {
   }, []);
 
   return (
-      <div id="allChamp">
-        {champions.map((champion, index) => (
-          <div key={index} className='champion'>
-            <a href={`?detail-champ=${champion.name}`}><img src={champion.imageUrl} alt={champion.name} /></a>
-          </div>
-        ))}
+    <div id='champ-select'>
+      <div id='search-bar'>
+        <TypingEffect text="Veuillez sélectionner un champion :" speed={50} />
+        {/* Champ de saisie pour la recherche */}
+        <input
+          type="text"
+          placeholder="Rechercher un champion..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
       </div>
+
+      <div id="all-champ">
+        {champions
+          .filter(champion => champion.name.toLowerCase().includes(searchTerm.toLowerCase()))
+          .map((champion) => (
+            <div className='champion'>
+              <Link to={`/champion/${champion.name}`} key={champion.name}>
+                <img src={champion.imageUrl} alt={champion.name} />
+              </Link>
+            </div>
+          ))}
+      </div>
+    </div>
   );
 }
 
