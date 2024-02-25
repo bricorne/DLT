@@ -7,7 +7,6 @@ function ChampionDetails() {
     return (
         <div>
             <h1>{name}</h1>
-            {/* Affichez d'autres détails du champion ici */}
         </div>
     );
 }
